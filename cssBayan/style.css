@@ -1,4 +1,89 @@
 * {
   box-sizing: border-box;
+  color: #D3D3A3;
+}
+
+body {
+  margin: 0 auto;
   background-color: #000000;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #404040;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  border-bottom: solid 0.2rem #D3D3A3;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+footer {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: solid 0.2rem #D3D3A3;
+  background-color: #000000;
+}
+
+.rss-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 8rem;
+  height: 4rem;
+  background-image: url('./assets/rss.svg');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.rss-year {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #D3D3A3;
+  font-weight: 900;
+  line-height: 2.4;
+  transition: 0.3s;
+}
+.rss-link:hover .rss-year {
+  letter-spacing: 0.2rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 6rem;
+  height: 4rem;
+  background-image: url('./assets/github.svg');
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #D3D3A3;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: right;
+}
+
+.github-link:hover {
+  letter-spacing: 0.05rem;
 }
