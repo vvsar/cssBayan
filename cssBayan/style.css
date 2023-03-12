@@ -127,39 +127,23 @@ label {
   }
 }
 
-#radio1:checked ~ label[for="radio1"] .img-box,
-#radio2:checked ~ label[for="radio2"] .img-box,
-#radio3:checked ~ label[for="radio3"] .img-box,
-#radio4:checked ~ label[for="radio4"] .img-box,
-#radio5:checked ~ label[for="radio5"] .img-box {
+:checked + label .img-box {
   visibility: visible;
   max-width: 30rem;
   width: fit-content;
   height: fit-content;
 }
 
-#radio1:checked ~ label[for="radio1"] img,
-#radio2:checked ~ label[for="radio2"] img,
-#radio3:checked ~ label[for="radio3"] img,
-#radio4:checked ~ label[for="radio4"] img,
-#radio5:checked ~ label[for="radio5"] img {
+:checked + label img {
   opacity: 1;
 }
 
-#radio1:checked ~ label[for="radio1"] .plus-icon,
-#radio2:checked ~ label[for="radio2"] .plus-icon,
-#radio3:checked ~ label[for="radio3"] .plus-icon,
-#radio4:checked ~ label[for="radio4"] .plus-icon,
-#radio5:checked ~ label[for="radio5"] .plus-icon {
+:checked + label .plus-icon {
   background-image: url(./assets/plus.svg);
   rotate: 45deg;
 }
 
-#radio1:checked ~ label[for="radio1"] h2,
-#radio2:checked ~ label[for="radio2"] h2,
-#radio3:checked ~ label[for="radio3"] h2,
-#radio4:checked ~ label[for="radio4"] h2,
-#radio5:checked ~ label[for="radio5"] h2 {
+:checked + label h2 {
   color: #D3D3A3;
 }
 
@@ -172,11 +156,7 @@ section:active h2 {
   color: #9ACD32;
 }
 
-#radio1:checked ~ label[for="radio1"] section:active h2,
-#radio2:checked ~ label[for="radio2"] section:active h2,
-#radio3:checked ~ label[for="radio3"] section:active h2,
-#radio4:checked ~ label[for="radio4"] section:active h2,
-#radio5:checked ~ label[for="radio5"] section:active h2 {
+:checked + label section:active h2 {
   color: #9ACD32;
 }
 
@@ -184,11 +164,7 @@ section:active .plus-icon {
   background-image: url(./assets/plus-lime.svg);
 }
 
-#radio1:checked ~ label[for="radio1"] section:active .plus-icon,
-#radio2:checked ~ label[for="radio2"] section:active .plus-icon,
-#radio3:checked ~ label[for="radio3"] section:active .plus-icon,
-#radio4:checked ~ label[for="radio4"] section:active .plus-icon,
-#radio5:checked ~ label[for="radio5"] section:active .plus-icon {
+:checked + label section:active .plus-icon {
   background-image: url(./assets/plus-lime.svg);
 }
 
