@@ -36,10 +36,24 @@ main {
   margin: 0 auto;
   max-width: 45rem;
   width: 90%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+@media (hover: hover) {
+  main {
+    cursor: pointer;
+  }
 }
 
 section {
   border-bottom: solid 0.1rem #D3D3A3;
+}
+
+.text-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .radiobutton {
@@ -49,6 +63,7 @@ section {
 .plus-icon {
   width: 2rem;
   height: 2rem;
+  margin: 1rem 0;
   background-image: url(./assets/plus.svg);
   /* background-size: 70%; */
   background-repeat: no-repeat;
@@ -72,6 +87,13 @@ section {
   display: block;
 }
 
+#radio1:checked ~ label[for="radio1"] section .text-row .plus-icon,
+#radio2:checked ~ label[for="radio2"] section .text-row .plus-icon,
+#radio3:checked ~ label[for="radio3"] section .text-row .plus-icon,
+#radio4:checked ~ label[for="radio4"] section .text-row .plus-icon,
+#radio5:checked ~ label[for="radio5"] section .text-row .plus-icon {
+  rotate: 45deg;
+}
 
 .img-box img {
   width: 100%;
@@ -133,4 +155,20 @@ footer {
 
 .github-link:hover {
   letter-spacing: 0.05rem;
+}
+
+@media (hover: none) {
+
+}
+
+@media (hover: hover) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 1024px) {
+
 }
