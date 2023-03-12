@@ -87,7 +87,7 @@ label {
   margin: 0.5rem auto;
   border: 0.1rem solid #000000;
   border-radius: 0.2rem;
-  transition: 3s;
+  transition: 0.3s;
 }
 
 .img-box img {
