@@ -41,14 +41,12 @@ main {
   font-style: italic;
 }
 
-@media (hover: hover) {
-  main {
-    cursor: pointer;
-  }
-}
-
 section {
   border-bottom: solid 0.1rem #D3D3A3;
+}
+
+label[for="radio5"] section {
+  border-bottom: none;
 }
 
 .text-row {
@@ -56,15 +54,23 @@ section {
   justify-content: space-between;
 }
 
+h2 {
+  color: #9ACD32;
+}
+
 .radiobutton {
   display: none;
+}
+
+label {
+  cursor: inherit;
 }
 
 .plus-icon {
   width: 2rem;
   height: 2rem;
   margin: 1rem 0;
-  background-image: url(./assets/plus.svg);
+  background-image: url(./assets/plus-lime.svg);
   /* background-size: 70%; */
   background-repeat: no-repeat;
   background-position: center;
@@ -77,6 +83,35 @@ section {
   margin: 0.5rem auto;
   border: 0.1rem solid #000000;
   border-radius: 0.2rem;
+}
+
+@media (hover: hover) {
+  main .plus-icon {
+    display: none;
+  }
+  main:hover {
+    cursor: pointer;
+  }
+  main:hover h2 {
+    color: #D3D3A3;
+    transition: 0.2s;
+  }
+  main:hover .plus-icon {
+    display: block;
+    background-image: url(./assets/plus.svg);
+    transition: 0.2s;
+  }
+}
+
+@media (hover: hover) {
+  section:hover .img-box {
+    display: block;
+    transition: 0.2s;
+  }
+  section:hover .text-row .plus-icon {
+    rotate: 45deg;
+    transition: 0.2s;
+  }
 }
 
 #radio1:checked ~ label[for="radio1"] section .img-box,
@@ -93,6 +128,15 @@ section {
 #radio4:checked ~ label[for="radio4"] section .text-row .plus-icon,
 #radio5:checked ~ label[for="radio5"] section .text-row .plus-icon {
   rotate: 45deg;
+  transition: 0.2s;
+}
+
+#radio1:checked ~ label[for="radio1"] section .text-row h2,
+#radio2:checked ~ label[for="radio2"] section .text-row h2,
+#radio3:checked ~ label[for="radio3"] section .text-row h2,
+#radio4:checked ~ label[for="radio4"] section .text-row h2,
+#radio5:checked ~ label[for="radio5"] section .text-row h2 {
+  color: #D3D3A3;
 }
 
 .img-box img {
