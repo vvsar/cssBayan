@@ -28,8 +28,8 @@ header {
 
 h1 {
   font-family: 'Montserrat';
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 main {
@@ -55,7 +55,11 @@ label[for="radio5"] section {
 }
 
 h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: #9ACD32;
+  transition: 0.3s;
 }
 
 .radiobutton {
@@ -67,11 +71,11 @@ label {
 }
 
 .plus-icon {
-  width: 2rem;
-  height: 2rem;
-  margin: 1rem 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 1.2rem 0;
   background-image: url(./assets/plus-lime.svg);
-  /* background-size: 70%; */
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -103,7 +107,6 @@ label {
   }
   main:hover h2 {
     color: #D3D3A3;
-    transition: 0.3s;
   }
   main:hover .plus-icon {
     display: block;
@@ -211,64 +214,109 @@ footer {
 }
 
 .rss-link {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  width: 8rem;
-  height: 4rem;
+  width: 4rem;
+  height: 2.5rem;
   background-image: url('./assets/rss.svg');
-  background-size: 70%;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.rss-year {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  color: #D3D3A3;
-  font-weight: 900;
-  line-height: 2.4;
+  background-position: center;
   transition: 0.3s;
 }
-.rss-link:hover .rss-year {
-  letter-spacing: 0.2rem;
+
+.year {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 0.4rem;
 }
 
 .github-link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 6rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 2.5rem;
   background-image: url('./assets/github.svg');
-  background-size: 2rem;
+  background-size: 1.4rem;
   background-repeat: no-repeat;
   background-position: left center;
-  padding-left: 2rem;
+  padding-left: 1.2rem;
   font-family: 'Roboto', sans-serif;
   color: #D3D3A3;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: 0.3s;
   text-align: right;
 }
 
-.github-link:hover {
-  letter-spacing: 0.05rem;
-}
-
-@media (hover: none) {
-
-}
-
 @media (hover: hover) {
-
+  .rss-link:hover {
+    background-image: url('./assets/rss-lime.svg');
+  }
+  .github-link:hover {
+    background-image: url('./assets/github-lime.svg');
+    letter-spacing: 0.05rem;
+    color: #9ACD32;
+  }
 }
 
-@media (max-width: 768px) {
-
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  h2  {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .plus-icon {
+    margin: 1.4rem 0;
+    background-size: 100%;
+  }
+  .rss-link {
+    width: 5rem;
+    height: 3rem;
+  }
+  .year {
+    font-size: 1.4rem;
+    line-height: 0.4rem;
+  }
+  .github-link {
+    width: 5.5rem;
+    height: 3rem;
+    background-size: 1.7rem;
+    padding-left: 2rem;
+    font-size: 1.4rem;
+  }
 }
 
-@media (max-width: 1024px) {
-
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h2  {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .plus-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 1.6rem 0;
+    background-size: 120%;
+  }
+  .rss-link {
+    width: 6.5rem;
+    height: 4rem;
+  }
+  .year {
+    font-size: 1.6rem;
+    line-height: 0.8rem;
+  }
+  .github-link {
+    width: 6.3rem;
+    height: 4rem;
+    background-size: 2rem;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+  }
 }
