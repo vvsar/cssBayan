@@ -78,11 +78,11 @@ label {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.3s;
 }
 
 .img-box {
-  display: none;
-  max-width: 0;
+  width: 0;
   height: 0;
   margin: 0.5rem auto;
   border: 0.1rem solid #000000;
@@ -91,10 +91,10 @@ label {
 }
 
 .img-box img {
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  object-position: center center;
+  opacity: 0;
   transition: 3s;
 }
 
@@ -111,16 +111,15 @@ label {
   main:hover .plus-icon {
     display: block;
     background-image: url(./assets/plus.svg);
-    transition: 0.3s;
   }
   section:hover .img-box {
-    display: block;
+    visibility: visible;
     max-width: 30rem;
+    width: fit-content;
     height: fit-content;
   }
   section:hover img {
-    width: 100%;
-    height: 100%;
+    opacity: 1;
   }
   section:hover .plus-icon {
     rotate: 45deg;
@@ -133,10 +132,10 @@ label {
 #radio3:checked ~ label[for="radio3"] .img-box,
 #radio4:checked ~ label[for="radio4"] .img-box,
 #radio5:checked ~ label[for="radio5"] .img-box {
-  display: block;
+  visibility: visible;
   max-width: 30rem;
+  width: fit-content;
   height: fit-content;
-  transition: 0.3s;
 }
 
 #radio1:checked ~ label[for="radio1"] img,
@@ -144,8 +143,7 @@ label {
 #radio3:checked ~ label[for="radio3"] img,
 #radio4:checked ~ label[for="radio4"] img,
 #radio5:checked ~ label[for="radio5"] img {
-  width: 100%;
-  height: 100%;
+  opacity: 1;
 }
 
 #radio1:checked ~ label[for="radio1"] .plus-icon,
@@ -155,7 +153,6 @@ label {
 #radio5:checked ~ label[for="radio5"] .plus-icon {
   background-image: url(./assets/plus.svg);
   rotate: 45deg;
-  transition: 0.3s;
 }
 
 #radio1:checked ~ label[for="radio1"] h2,
@@ -168,17 +165,11 @@ label {
 
 section:active .img-box {
   box-shadow: 0 0 0.3rem 0.3rem #9ACD32;
-  transition: 0.3s;
-}
-
-section:active img {
   opacity: 0.3;
-  transition: 0.3s;
 }
 
 section:active h2 {
   color: #9ACD32;
-  transition: 0.3s;
 }
 
 #radio1:checked ~ label[for="radio1"] section:active h2,
@@ -187,12 +178,10 @@ section:active h2 {
 #radio4:checked ~ label[for="radio4"] section:active h2,
 #radio5:checked ~ label[for="radio5"] section:active h2 {
   color: #9ACD32;
-  transition: 0.2s;
 }
 
 section:active .plus-icon {
   background-image: url(./assets/plus-lime.svg);
-  transition: 0.3s;
 }
 
 #radio1:checked ~ label[for="radio1"] section:active .plus-icon,
@@ -201,7 +190,6 @@ section:active .plus-icon {
 #radio4:checked ~ label[for="radio4"] section:active .plus-icon,
 #radio5:checked ~ label[for="radio5"] section:active .plus-icon {
   background-image: url(./assets/plus-lime.svg);
-  transition: 0.3s;
 }
 
 footer {
